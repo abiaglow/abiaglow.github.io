@@ -1,0 +1,623 @@
+<!DOCTYPE html >
+
+<html>
+
+<head runat="server">
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type" />
+<title>CH402</title>
+<style type="text/css">
+.auto-style2 {text-align: center;}
+.auto-style3 {text-decoration: none;}
+.auto-style4 {font-size: large; color: #FF3300; text-align: center;}
+.auto-style5 {font-size: large; text-align: center;}
+.auto-style6 {font-size: x-small; font-weight: bold; text-align: center;}
+.auto-style7 {font-size: x-small; text-align: center;}
+.auto-style8 {font-size: xx-large;	text-align: center;}
+th, td {text-align: left; font-size: small; font-family: "Lucida Console"; padding: 3px;}
+</style>
+</head>
+
+<body style="background-image: url('images/bayway_refinery_google_maps2.jpg'); background-attachment: fixed">
+
+<form id="form1" runat="server">
+
+<div id="layer1" style="position: absolute; width: 200px;  height: 150px; left: 1000px; top: 25px;  z-index: 5">
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style7"><font face="Lucida Console">M = Monday</font></p>
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style7"><font face="Lucida Console">T = Tuesday</font></p>
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style7"><font face="Lucida Console">W = Wednesday</font></p>
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style7"><font face="Lucida Console">Th = Thursday</font></p>
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style7"><font face="Lucida Console">F = Friday</font></p>
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style7"><font face="Lucida Console">m = modified schedule</font></p>
+</div>
+
+<div id="layer2" style="position: absolute; width: 350px; height: 130px; z-index: 2; left: 50px; top: 25px">
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style7"><font face="Lucida Console">This schedule is subject to minor </font></p>
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style7"><font face="Lucida Console">revisions during the semester.&nbsp; </font></p>
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style7"><font face="Lucida Console">Please bring any scheduling errors,</font></p>
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style7"><font face="Lucida Console">broken hyperlinks, conflicts, or</font></p>
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style7"><font face="Lucida Console">other issues to the attention of</font></p>
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style7"><font face="Lucida Console">your instructor.</font></p>
+	<p style="margin-top: 5px; margin-bottom: 5px" class="auto-style6"><font face="Lucida Console">Last Updated 18 December 2021</font></p>
+</div>
+
+<div id="layer4" style="position: absolute; width: 1200px; height: 3000px; left: 10px; top: 200px; z-index: 4">
+<table style="width:100%">
+
+  <tr>
+    <th>LESSON</th>
+    <th>DATE</th> 
+    <th>TOPIC</th>
+    <th>PAGES</th>
+    <th>PROBLEMS</th>
+    <th>PS</th>
+  </tr>
+
+  <tr>
+    <td>&nbsp;&nbsp;1</td>
+    <td>4 Jan (T)</td>
+    <td><a class="auto-style3" href="instructor_notes/C1_AY222.pdf">Introduction to Process Design</a></td>
+    <td><a class="auto-style3" href="objectives/obj_L01.pdf">1-14</a></td>
+    <td>none</td>
+  </tr>
+
+  <tr>
+    <td colspan="3" class="auto-style2"><b>Block 1: Piping & Ancillary Equipment</b></td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;&nbsp;2</td>
+    <td>6 Jan (Th)</td> 
+    <td>Transport and Handling of Fluids</td>
+    <td>485-507</td>
+    <td>12-1, 12-2</td>
+    <td>1</td> 
+  </tr>
+  </tr>
+
+  <tr>
+    <td>&nbsp;&nbsp;3</td>
+    <td>10 Jan (W)</td>
+    <td>Pumps and Pump Design</td>
+    <td>508-536</td>
+    <td>12-6</td>
+    <td>2</td> 
+  </tr> 
+
+  <tr>
+    <td>&nbsp;&nbsp;4</td>
+    <td>13 Jan (Th)</td>
+    <td>Agitators</td>
+    <td>536-549</td>
+    <td>12-13</td>
+    <td>2</td> 
+  </tr>
+
+  <tr>
+    <td>R2(CR/2)</td>
+    <td>14 Jan (F)</td>
+    <td>Piping Design Problem (DP1)</td>
+    <td>none</td>
+    <td>none</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;&nbsp;5</td>
+    <td>18 Jan (T)</td>
+    <td>Flow Measurement and Storage of Fluids</td>
+    <td>549-560</td>
+    <td>12-14</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+    <td>S2(DS/2)</td>
+    <td>19 Jan (W)</td>
+    <td>Piping Design Problem (DP1)</td>
+    <td>none</td>
+    <td>none</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;&nbsp;6 </td>
+    <td>20 Jan (Th) </td>
+    <td>Handling Solids</td>
+    <td>560-586</td>
+    <td>12-15</td>
+    <td>3</td> 
+  </tr>
+
+  <tr>
+    <td colspan="3" class="auto-style2"><b>Block 2: Heat Exchangers</b></td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;&nbsp;7 <a href="admin/Compressed_Schedule.pdf">c</a></td>
+    <td>24 Jan (M)</td>
+    <td>Heat Exchanger Theory</td>
+    <td>643-668</td>
+    <td>14-2</td> 
+    <td>4</td> 
+  </tr>
+
+  <tr>
+    <td>R2(CR/3)</td>
+    <td>25 Jan (T)</td>
+    <td>Heat Exchanger Design Problem (DP2)</td>
+    <td>none</td>
+    <td>Example 14-5</td> 
+  </tr>
+
+  <tr>
+    <td>&nbsp;&nbsp;8</td>
+    <td>27 Jan (Th)</td>
+    <td>Heat Exchanger Types & Costs</td>
+    <td>669-694</td>
+    <td>14-9</td>
+    <td>4</td>
+  </tr>
+
+  <tr>
+    <td>S2(DS/3)</td>
+    <td>28 Feb (F)</td>
+    <td>Heat Exchanger Design Problem (DP2)</td>
+    <td>none</td>
+    <td>Example 14-5</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;&nbsp;9</td>
+    <td>31 Jan (M)</td>
+    <td>Heat Exchanger Design I</td>
+    <td>694-724</td>
+    <td>14-15</td>
+    <td>5</td> 
+  </tr>
+
+  <tr>
+    <td>&nbsp;10</td>
+    <td>2 Feb (W)</td> 
+    <td>Heat Exchanger Design II</td>
+    <td>724-738</td>
+    <td>14-16</td>
+    <td>5</td>
+  </tr>
+
+  <tr>
+    <td>R2(CR/4)</td>
+    <td>3 Feb (Th)</td>
+    <td>Condenser, Reflux Drum, & Reboiler Costs (DP3)</td>
+    <td>none</td>
+    <td>none</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;11</td>
+    <td>4 Feb (F)</td>
+    <td>Heat Exchanger Design III</td>
+    <td>738-745</td>
+    <td>14-16</td>
+    <td>5</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;12</td>
+    <td>7 Feb (M)</td>
+    <td>Flowsheet Synthesis</td>
+    <td>125-148</td>
+    <td>4-13</td> 
+    <td>6</td>
+  </tr>
+
+  <tr>
+    <td>S2(DS/4)</td>
+    <td>8 Feb (T)</td>
+    <td>Condenser, Reflux Drum, & Reboiler Costs (DP3)</td>
+    <td>none</td>
+    <td>none</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;13</td>
+    <td>11 Feb (F)</td>
+    <td>Written Partial Review 1</td>
+  </tr>
+
+  </tr>
+    <tr>
+    <td colspan="3" class="auto-style2"><b>Block 3: Engineering Economics</b></td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;14</td>
+    <td>14 Feb (M)</td>
+    <td>Cost Estimation and CapitalInvestments</td>
+    <td>226-239</td>
+    <td>6-1,2</td>
+    <td>7</td> 
+  </tr>
+
+  <tr>
+    <td>R2(CR/5)</td>
+    <td>16 Feb (W)</td>
+    <td>BreakevenAnalysis (DP4)</td>
+    <td>none</td>
+    <td>none</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;15</td>
+    <td>17 Feb (Th)</td>
+    <td>Cost Components of Capital Investments</td>
+    <td>239-258</td>
+    <td>6-3,4</td>
+    <td>7</td> 
+  </tr>
+
+  <tr>
+    <td>S2(DS/5)</td>
+    <td>18 Feb (F)</td>
+    <td>BreakevenAnalysis (DP4)</td>
+    <td>none</td>
+    <td>none</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;16</td>
+    <td>22 Feb (T)</td>
+    <td>Revenue, Production Cost, & Cash Flow; Quiz1</td>
+    <td>258-274</td>
+    <td>6-8,9,10 </td> 
+    <td>8</td> 
+  </tr>
+  
+  <tr>
+    <td>&nbsp;17</td>
+    <td>24 Feb (Th)</td>
+    <td>Interest, Taxes, & Fixed Charges; Quiz 2 </td>
+    <td>279-303</td>
+    <td>7-1,2,4,5</td> 
+    <td>9</td>
+  </tr>
+  
+  <tr>
+    <td>R2(CR/6)</td>
+    <td>25 Feb(F)</td>
+    <td>Quiz 4</td>
+    <td>none</td>
+    <td>none</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;18</td>
+    <td>28 Feb (M)</td>
+    <td>Depreciation and Taxes; Quiz 3</td>
+    <td>292-303</td>
+    <td>7-9,17,18</td> 
+    <td>9</td>
+  </tr>
+
+  <tr>
+    <td>S2(DS/6)</td>
+    <td>1 Mar (T)</td>
+    <td>Quiz 4</td>
+    <td>none</td>
+    <td>none</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;19 <a href="admin/005_Modified_Schedule.pdf">m</a></td>
+    <td>4 Mar (F)</td>
+    <td>Profitability; Quiz 5</td>
+    <td>319-352</td>
+    <td>8-1,2,4,6</td> 
+    <td>10</td>
+  </tr> 
+
+  <tr>
+  <td colspan="3" class="auto-style2"><b>*** 5-13 Mar SPRING LEAVE ***</b></td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;20</td>
+    <td>14 Mar (M)</td>
+    <td>Written Partial Review 2</td>
+  </tr>
+
+  <tr>
+    <td>R2(CR/7)</td>
+    <td>15 Mar (T)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;21</td>
+    <td>16 Mar (W)</td>
+    <td>Introductionto Design Projects</td>
+    <td>469-484</td>
+    <td>none</td>
+  </tr>
+
+  <tr>
+    <td>S2(DS/7)</td>
+    <td>17 Mar (Th)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;22</td>
+    <td>18 Mar (F)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;23</td>
+    <td>22 Mar (T)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>R2(CR/8)</td>
+    <td>24 Mar (Th)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;24</td>
+    <td>25 Mar (F)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;25</td>
+    <td>28 Mar (M)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>S2(DS/8)</td>
+    <td>29 Mar (T)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;26</td>
+    <td>30 Mar (W)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;27</td>
+    <td>1 Apr (F)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;28</td>
+    <td>4 Apr (M)</td>
+    <td>Classroom - Directed Independent Study - IPR1</td>
+  </tr>
+
+  <tr>
+    <td>R2(CR/9)</td>
+    <td>5 Apr (T)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;29</td>
+    <td>6 Apr (W)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;30</td>
+    <td>8 Apr (F)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;31</td>
+    <td>11 Apr (M)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>S2(DS/9)</td>
+    <td>12 Apr (T)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;32</td>
+    <td>13 Apr (W)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;33</td>
+    <td>15 Apr (F)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>R2(CR/10)</td>
+    <td>18 Apr (M)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;34</td>
+    <td>19 Apr (T)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>S2(DS/10)</td>
+    <td>21 Apr (Th)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;35</td>
+    <td>22 Apr (F)</td>
+    <td>Classroom - Directed Independent Study - IPR2</td>
+  </tr>
+
+   <tr>
+    <td>&nbsp;36</td>
+    <td>25 Apr (M)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;37</td>
+    <td>27 Apr (W)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;38</td>
+    <td>2 May (M)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;39</td>
+    <td>4 May (W)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;40</td>
+    <td>5 May (Th)</td>
+    <td>Classroom - Directed Independent Study</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;41</td>
+    <td>TEE</td>
+    <td>TBD</td>
+  </tr>
+
+  <tr><td></td></tr>
+
+  <tr>
+    <td colspan="2" class="auto-style2"><b>Problem Set Due Dates  (Due by COB - 1630 hrs)</b></td>
+  </tr
+
+  <tr><td></td></tr>
+
+  <tr>
+    <td>&nbsp;PS1</td>
+    <td>6 Jan (Th)</td>
+    <td>Problem Set 1</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;PS2</td>
+    <td>14 Jan (F)</td>
+    <td>Problem Set 2</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;PS3</td>
+    <td>21 Jan (F)</td>
+    <td>Problem Set 3</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;PS4</td>
+    <td>28 Jan (F)</td>
+    <td>Problem Set 4</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;PS5</td>
+    <td>4 Feb (F)</td>
+    <td>Problem Set 5</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;PS6</td>
+    <td>10 Feb (Th)</td>
+    <td>Problem Set 6</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;PS7</td>
+    <td>18 Feb (F)</td>
+    <td>Problem Set 7</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;PS8</td>
+    <td>23 Feb (W) </td>
+    <td>Problem Set 8</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;PS9</td>
+    <td>1 Mar (T)</td>
+    <td>Problem Set 9</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;PS10</td>
+    <td>4 Mar (F)</td>
+    <td>Problem Set 10</td>
+  </tr>
+
+  <tr><td></td></tr>
+
+  <tr>
+    <td>Quiz1</td>
+    <td>22 Feb (T)</td>
+    <td>Quiz 1 Solution</td>
+  </tr>
+
+  <tr>
+    <td>Quiz2</td>
+    <td>24 Feb (Th)</td>
+    <td>Quiz 2 Solution</td>
+  </tr>
+
+  <tr>
+    <td>Quiz3</td>
+    <td>28 Feb (M)</td>
+    <td>Quiz 3 Solution</td>
+  </tr>
+
+  <tr>
+    <td>Quiz4</td>
+    <td>25 Feb (F)</td>
+    <td>Quiz 4 Solution</td>
+  </tr>
+
+  <tr>
+    <td>Quiz4</td>
+    <td>1 Mar (T)</td>
+    <td>Quiz 4 Solution</td>
+  </tr>
+
+  <tr>
+    <td>Quiz5</td>
+    <td>4 Mar (F)</td>
+    <td>Quiz 5 Solution</td>
+  </tr> 
+
+
+
+</table>
+</div>
+
+<div id="layer3" style="position: absolute; left: 225px; top: 20px; width: 800px; height: 180px; z-index: 3">
+	<p style="margin-top: 0; margin-bottom: 0" class="auto-style8"><font color="#FF3300">CH402 Lesson Schedule</font></p>
+	<p style="margin-top: 0; margin-bottom: 0" class="auto-style5"><font color="#FF3300">USMA Chemical Engineering AY21-22</font></p>
+	<p style="margin-top: 0; margin-bottom: 0" class="auto-style4">Professor Andrew Biaglow (O: BH441 P: x4080)</p>
+	<p style="margin-top: 0; margin-bottom: 0" class="auto-style4">Hours: C1R2 (0950-1045), D1S2 (1055-1150), Room BH331</p>
+</div>
+
+</form>
+</body>
+</html>
