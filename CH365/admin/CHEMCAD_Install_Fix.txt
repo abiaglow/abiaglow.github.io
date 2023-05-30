@@ -1,0 +1,15 @@
+CHEMCAD rollback issue during install can be repaired with the following procedure:
+
+1. In the search box at the bottom of your desktop screen, type "cmd"  and run it to open a command prompt, and the type "netstat -a -n -p udp -o"
+
+2. Look for the address occupying port 6001.  It should look like 127.0.0.1:6001 or something like that.  Write down the PID associated with that number.  On my system it is 15304.
+
+3. Then go to task manager by typing Control-shift-esc.  Click the "Services" tab, then click the PID column to sort by PID.  Scroll down to 15304 or whatever your number is, right-click the name associated with PID 15304 and stop it.  On my system it is Sentinel Protection Server.
+
+4. Install CHEMCAD
+
+5. Go back and re-start the Sentinel Protection Server
+
+6. Let me know how you continue to have issues.
+
+Dr. Biaglow

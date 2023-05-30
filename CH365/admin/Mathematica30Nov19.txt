@@ -1,0 +1,49 @@
+Last Updated 4 October 2019 (Expires 30 November 2019)
+
+Below are the new temporary Mathematica passwords by version.  You can wait until 
+5 October to enter when the current password expires, or you can enter the password 
+now and activate manually following the "activate manually" instructions at the 
+bottom of this note.
+
+You will need to know which version of Mathematica is installed on your computer.  
+To find this, click "Help," then "About Wolfram Mathematica..."
+
+PASSWORDS:
+
+Version:   12.0.0.0
+License #: L3002-9103
+Password:  39110-42273-04651-10686-20236-314
+
+Version 11.3.0
+License #: L3002-9103
+Password:  28191-56403-48943-48816-13596-314
+
+Version 11.2.0
+License #: L3002-9103
+Password:  37970-27183-28526-56381-57495-314
+
+Version 11.1.0 and 11.1.1
+License #: L3002-9103
+Password:  21296-20253-41827-28430-45005-314
+
+Version 11.0.0 and 11.0.1
+License #: L3002-9103
+Password:  23851-53281-18982-58208-32932-314
+
+
+Instructions to activate manually:
+
+Step 1: Under Help tab Click "Enter Activation Key"
+Step 2: Click "Other ways to Activate"
+Step 3: Click "Manual Activation"
+Step 4: Enter Password for correct version
+Step 5: Click "Activate"
+Step 6: Close Mathematica and reopen
+
+
+
+
+
+
+
+

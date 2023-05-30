@@ -1,0 +1,22 @@
+There have been issues with printing in Room 331.
+
+If you print something and it does not print out, you must clear the print spooler.  
+Your failed job will be preventing other cadets from printing from their computers.
+
+Do this as follows:
+
+1.  Click the Microsoft "Start" button on the lower left portion of your main monitor.
+2.  Click "Devices and Printers."
+3.  Click "Printers" on the main menu and then "Run as Administrator."
+4.  Click on the Lexmark printer with the green checkmark.
+5.  Clear all jobs from the spooler.
+
+We have been experiencing some network issues.  If you still cannot print at this point, 
+the network issues may be the cause.  
+
+You can try re-starting the computer.  This may or may not correct the issue.  I have seen 
+this work about half the time.
+
+
+
+
