@@ -1,0 +1,75 @@
+<html>
+<!--
+CODE AND IMAGES COPYRIGHT (c) 2005, ANDY BIAGLOW
+-->
+<title>Virtual Pickett Microline 161-CSTR</title>
+<script type="text/javascript">
+<!--
+
+var showing_front=1;
+
+function showRuleBack()
+{
+  document.images.statortop.src ='n904-t-stator-back-top.jpg';
+  document.images.statorbottom.src ='n904-t-stator-back-bottom.jpg';
+  dd.elements.slider.swapImage('n904-t-slider-back.jpg');
+}
+
+function showRuleFront()
+{
+  document.images.statortop.src ='n904-t-stator-front-top.jpg';
+  document.images.statorbottom.src ='n904-t-stator-front-bottom.jpg';
+  dd.elements.slider.swapImage('n904-t-slider-front.jpg');
+}
+
+function flipSlideRule()
+{  if(showing_front)
+  {
+    showRuleBack();
+    showing_front = 0;
+  }
+  else
+  {
+    showRuleFront();
+    showing_front = 1;
+  }
+}
+
+-->
+</script>
+<body bgcolor="#80c0e0">
+<b><big>Simulated Pickett-style "161-CSTR" Microline Slide Rule</big></b>
+
+<!--
+A simulation of a Pickett slide rule implemented in JavaScript and DHTML.<br>
+<b>Instructions</b>: Just click and drag anywhere on the rule. If it's not working properly, click <b>"Reload"</b> on your browser to reinitialize things. I think the problem is that some initialization functions are called before the images are done loading.<br>
+
+This page made possible by the miraculous <a href="http://www.walterzorn.com/dragdrop/dragdrop_e.htm"> Drag & Drop for Images and Layers</a> library by Walter Zorn.<br> 
+(Note: I commented out line 1197 of wz_dragdrop.js, "<tt>dd.obj.maximizeZ();</tt>" for aesthetic reasons.)<p>
+
+-->
+<hr>
+<script type="text/javascript" src="wz_dragdrop.js"></script>
+<table width="100%"><tr><td align="right">
+<!--
+<button align=right onclick="flipSlideRule()">Flip to Other Side of Slide Rule</button>
+-->
+</td></tr></table>
+
+<div id="layer1" style="position:relative;top:10px;left:20px;height:290px;width:938px">
+  <img style="position:absolute; top:27px;  left:0;  " id="statortop"      src="160-es-top.jpg"       width=918 height=47 >    
+  <img style="position:absolute; top:74px;  left:0;  " name="slider"       src="160-es-slider.jpg"    width=918 height=68>
+  <img style="position:absolute; top:142px; left:0;  " id="statorbottom"   src="160-es-bottom.jpg"    width=918 height=47 >
+  <img style="position:absolute; top:74px;  left:0;  " name="leftendbit"   src="160-es-left-bit.gif"  width=33 height=68 >
+  <img style="position:absolute; top:74px;  left:882;" name="rightendbit"  src="160-es-right-bit.gif" width=36 height=68>
+  <img style="position:absolute; top:-4px;  left:200;" name="cursor"       src="160-cursor.gif"       width=83 height=216>
+</div>
+
+<script type="text/javascript">
+<!--
+SET_DHTML(SCROLL,  "cursor"+HORIZONTAL,"rightendbit"+HORIZONTAL+VERTICAL,"leftendbit"+HORIZONTAL+VERTICAL,"layer1"+HORIZONTAL, "slider"+HORIZONTAL);
+
+-->
+</script>
+
+</body></html>
