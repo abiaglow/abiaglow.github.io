@@ -1,177 +1,182 @@
-<!DOCTYPE HTML>
-<HTML>
-<HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META http-equiv="Description" content="Free Sidereal Clock Javascript">
-<TITLE>Free Sidereal Clock Javascript</TITLE>
-<STYLE type="text/css">
-<!--
-INPUT{
-font-family : Arial;
-color : #ff0000;
-background-color : #000000;
-border-color : #000000;
-font-weight : bolder;
-}
-BUTTON{
-font-family : Arial;
-color : #808080;
-background-color : #000000;
-border-style : solid;
-border-color : #808080;
-font-weight : bolder;
-}
-TABLE{
-font-family : Arial;
-color : #A0A0A0;
-background-color : #000000;
-font-size : xx-small;
-font-weight : bolder;
-}
-BODY{
-background-color : #000000;
-}-->
-</STYLE>
-<SCRIPT language="JavaScript" src="sidereal.js"></SCRIPT>
-</HEAD>
-<BODY onload="loadUserSetting()" bgcolor="#000000">
-<CENTER>
-<FORM name="clock">
-<TABLE border="0" width="200" height="100" cellspacing="5" style="border-size : 4px;border-color : black;border-style : solid;">
+<html>
 
-<TR>
-<TD colspan="2" align="left">
-<CENTER>
-<TABLE border="0" cellspacing="5" style="font-size : small;">
-<TBODY>
-<TR>
-<TD align="center">SIDEREAL CLOCK JAVASCRIPT</TD>
-</TR>
-<TR>
-<TD align="center"><FONT size="-1">Local Time</FONT></TD>
-</TR>
-<TR>
-<TD align="center"><INPUT id="date" value="Requires JavaScript" size="70" style="font-size : medium;text-align : center;" type="text" onclick="ShowLocal()"></TD>
-</TR>
-</TBODY>
-</TABLE>
-</CENTER>
-</TD>
-</TR>
-<TR>
-<TD colspan="2" align="left">
-<TABLE border="0" cellspacing="5" style="font-size : small;">
-<TBODY>
-<TR>
-<TD align="center"><FONT size="-1">UTC Time (GMT)</FONT></TD>
-<TD align="center"><FONT size="-1">GMST Angle</FONT></TD>
-<TD align="center"><FONT size="-1">GMST</FONT></TD>
-</TR>
-<TR>
-<TD align="center"><INPUT id="utc" value="0" size="29" style="font-size : medium;" type="text" onclick="ShowUTC()"></TD>
-<TD align="center"><INPUT id="gmstangle" value="0" size="8" style="font-size : medium;" type="text" onclick="ShowGmstAngle()"></TD>
-<TD align="center"><INPUT id="gmst" value="0" size="8" style="font-size : medium;" type="text" onclick="ShowGMST()"></TD>
-</TR>
-</TBODY>
-</TABLE>
-</TD>
-</TR>
-<TR>
-<TD align="left" valign="middle">
-<TABLE border="0" style="font-size : small;">
-<TBODY>
-<TR>
-<TD align="center" colspan="4">Local Longitude</TD>
-</TR>
-<TR>
-<TD colspan="4">
-<TABLE border="0" cellspacing="2" style="font-size : small;">
-<TBODY>
-<TR>
-<TD><INPUT id="degrees" value="0" size="1" style="border-style : none;" type="text"></TD>
-<TD align="center"><INPUT id="minutes" value="0" size="1" style="border-style : none;" type="text"></TD>
-<TD><INPUT id="seconds" value="0" size="5" style="border-style : none;" type="text"></TD>
-<TD><INPUT id="meridian" value="West" size="2" style="border-style : none;" type="text"></TD>
-</TR>
-</TBODY>
-</TABLE>
-</TD>
-</TR>
-<TR>
-<TD colspan="4">
-<TABLE border="0" cellspacing="2" style="font-size : small;">
-<TBODY>
-<TR>
-<TD><INPUT id="degrees2" value="0" size="1" style="border-style : none;" type="text"></TD>
-<TD align="center"><INPUT id="dminutes" value="0" size="7" style="border-style : none;" type="text"></TD>
-<TD><INPUT id="meridian2" value="West" size="2" style="border-style : none;" type="text"></TD>
-</TR>
-</TBODY>
-</TABLE>
-</TD>
-</TR>
-<TR>
-<TD colspan="4" align="center">
-<TABLE border="0" cellspacing="2" style="font-size : small;">
-<COL span="1">
-<COL span="1" width="50">
-<TBODY>
-<TR>
-<TD align="left"><INPUT class="userData" id="longitude" value="0" size="9" type="text"></TD>
-<TD align="center">
-<BUTTON type="button" name="set-up" value="set-up" onclick="newLongitude()">Set-up</BUTTON>
-</TD>
-<TD align="right">
-<BUTTON type="button" name="about" value="about" onclick="ShowAbout()">About</BUTTON>
-</TD>
-</TR>
-</TBODY>
-</TABLE>
-</TD>
-</TR>
-</TBODY>
-</TABLE>
-</TD>
-<TD align="right" valign="bottom">
-<TABLE border="0" cellspacing="5" style="font-size : small;">
-<TBODY>
-<TR>
-<TD colspan="2">
-<TABLE border="0" cellspacing="5" style="font-size : small;">
-<TBODY>
-<TR>
-<TD align="center"><FONT size="-1">Year Day</FONT></TD>
-<TD align="center"><FONT size="-1">LST Angle</FONT></TD>
-</TR>
-<TR>
-<TD align="center"><INPUT id="day" value="0" size="6" style="font-size : medium;" type="text" onclick="ShowDay()"></TD>
-<TD align="center"><INPUT id="angle" value="0" size="8" style="font-size : medium;" type="text" onclick="ShowAngle()"></TD>
-</TR>
-</TBODY>
-</TABLE>
-</TD>
-</TR>
-<TR>
-<TD colspan="2" align="center">
-<TABLE border="0" cellspacing="5" style="font-size : small;">
-<TBODY>
-<TR>
-<TD align="center">Local Sidereal Time</TD>
-</TR>
-<TR>
-<TD align="center" valign="top"><INPUT id="lst" value="0" size="8" style="font-size : x-large;" type="text" onclick="ShowLST()"></TD>
-</TR>
-</TBODY>
-</TABLE>
-</TD>
-</TR>
-</TBODY>
-</TABLE>
-</TD>
-</TR>
-</TABLE>
-</FORM>
-</CENTER>
-</BODY>
-</HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=windows-1252">
+<title>COURSES_v46</title>
+<style type="text/css">
+.auto-style1 {text-decoration: none;}
+.auto-style2 {text-align: left;}
+.auto-style3 {font-family: "Times New Roman", Times, serif;}
+.auto-style4 {margin-top: 23px;}
+</style>
+</head>
+
+<body background="images/bayway_refinery_google_maps2.JPG" style="background-attachment: fixed">
+
+<!-- Contact and Title Section -->
+<div id="layer1"; style="z-index: 1; position: absolute; width: 439px; height: 73px; top: 58px; left: 128px"; align="center">
+	<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font color="#ff3300" size="6">Professor Andrew Biaglow</font></p>
+	<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="4" color="#FF3300">&nbsp;&nbsp;&nbsp;Office: BH441</font></p>
+	<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="4" color="#FF3300">&nbsp;&nbsp;&nbsp;Classroom: BH331</font></p>
+	<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="4" color="#FF3300">&nbsp;&nbsp;&nbsp;Phone: x4080</font></p> <br />
+	<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font color="#ff3300" size="6">Course Links</font></p>
+	<p align="left" style="margin-top: 0; margin-bottom: 0" class="auto-style3"> <a class="auto-style1" href="CH365/indexCH365.html">&nbsp;&nbsp;&nbsp;CH365</a></p>
+	<p align="left" style="margin-top: 0; margin-bottom: 0" class="auto-style3"> <a class="auto-style1" href="CH402/indexCH402.html">&nbsp;&nbsp;&nbsp;CH402</a></p>
+</div>
+
+
+<!-- Clock Section-->
+<!-- https://logwork.com/clock-widget -->
+<div id="layer2"; style="position: absolute; width: 250px; height: 250px; z-index: 2; left: 570px; top: 58px"; align="left" class="auto-style4">         
+     <script src="https://cdn.logwork.com/widget/clock.js"></script>
+     <a href="https://logwork.com/current-time-in-west-point-united-states-new-york" class="clock-time" data-style="default-numeral" data-size="125" data-timezone="America/New_York">New York</a>
+</div>
+<div id="layer21"; style="position: absolute; width: 250px; height: 250px; z-index: 21; left: 720px; top: 58px"; align="left" class="auto-style4">      
+     <script src="https://cdn.logwork.com/widget/clock.js"></script>
+     <a href="https://logwork.com/current-time-in-chicago-united-states-illinois" class="clock-time" data-style="default-numeral" data-size="125" data-timezone="America/Chicago">Chicago</a>
+</div>
+<!-- <div id="layer22"; style="position: absolute; width: 250px; height: 250px; z-index: 22; left: 870px; top: 58px"; align="left" class="auto-style4">      							 -->
+<!--      <script src="https://cdn.logwork.com/widget/clock.js"></script> 																	 -->
+<!--      <a href="https://logwork.com/current-time-in-denver-united-states-colorado" class="clock-time" data-style="default-numeral" data-size="125" data-timezone="America/Denver">Denver</a> 		 -->
+<!-- </div> 																									 -->
+<!-- <div id="layer23"; style="position: absolute; width: 250px; height: 250px; z-index: 23; left: 1020px; top: 58px"; align="left" class="auto-style4">      							 -->
+<!--      <script src="https://cdn.logwork.com/widget/clock.js"></script> 																	 -->
+<!--      <a href="https://logwork.com/current-time-in-los-angeles-united-states-california" class="clock-time" data-style="default-numeral" data-size="125" data-timezone="America/Los_Angeles">Los Angeles</a> -->
+<!-- </div> 																									 -->
+<!-- <div id="layer24"; style="position: absolute; width: 250px; height: 250px; z-index: 24; left: 1170px; top: 58px"; align="left" class="auto-style4">       							 -->
+<!--      <script src="https://cdn.logwork.com/widget/clock.js"></script>																	 -->
+<!--      <a href="https://logwork.com/current-time-in-anchorage-united-states-alaska" class="clock-time" data-style="default-numeral" data-size="125" data-timezone="America/Anchorage">Anchorage</a>		 -->
+<!-- </div>																									 -->
+<!-- <div id="layer25"; style="position: absolute; width: 250px; height: 250px; z-index: 25; left: 1320px; top: 58px"; align="left" class="auto-style4">     							 -->
+<!--      <script src="https://cdn.logwork.com/widget/clock.js"></script>																	 -->
+<!--      <a href="https://logwork.com/current-time-in-honolulu-united-states-hawaii" class="clock-time" data-style="default-numeral" data-size="125" data-timezone="Pacific/Honolulu">Honolulu</a>		 -->
+<!-- </div>																									 -->
+<!-- End Clock Section -->
+
+<!-- RSS Feed Section -->
+<div id="layer3"; style="position: absolute; width: 250px; height: 280px; z-index: 3; left: 128px; top: 350px"; align="left"> 
+     <script type="text/javascript"> 
+     <!-- 
+     rssfeed_url = new Array(); 
+     rssfeed_url[0]="https://www.youtube.com/feeds/videos.xml?user=ChemEngineeringGuy"; rssfeed_url[1]="https://pubsapp.acs.org/cen/rss/latestnews.xml"; rssfeed_url[2]="http://chem-eng.blogspot.com/feeds/posts/default";  
+     rssfeed_frame_width="300"; 
+     rssfeed_frame_height="500"; 
+     rssfeed_scroll="on"; 
+     rssfeed_scroll_step="6"; 
+     rssfeed_scroll_bar="off"; 
+     rssfeed_target="_blank"; 
+     rssfeed_font_size="12"; 
+     rssfeed_font_face=""; 
+     rssfeed_border="on"; 
+     rssfeed_css_url="https://feed.surfing-waves.com/css/style6.css"; 
+     rssfeed_title="on"; 
+     rssfeed_title_name="Chemical Engineering News"; 
+     rssfeed_title_bgcolor="#3366ff"; 
+     rssfeed_title_color="#fff"; 
+     rssfeed_title_bgimage=""; 
+     rssfeed_footer="off"; 
+     rssfeed_footer_name="rss feed"; 
+     rssfeed_footer_bgcolor="#fff"; 
+     rssfeed_footer_color="#333"; 
+     rssfeed_footer_bgimage=""; 
+     rssfeed_item_title_length="50"; 
+     rssfeed_item_title_color="#666"; 
+     rssfeed_item_bgcolor="#fff"; 
+     rssfeed_item_bgimage=""; 
+     rssfeed_item_border_bottom="on"; 
+     rssfeed_item_source_icon="off"; 
+     rssfeed_item_date="off"; 
+     rssfeed_item_description="on"; 
+     rssfeed_item_description_length="120"; 
+     rssfeed_item_description_color="#666"; 
+     rssfeed_item_description_link_color="#333"; 
+     rssfeed_item_description_tag="off"; 
+     rssfeed_no_items="0"; 
+     rssfeed_cache = "7b324678eeee5e2f4463415eff99062c"; 
+     //--> 
+     </script> 
+     <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
+     <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. --> 
+     <div style="color:#ccc;font-size:10px; text-align:right; width:300px;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div> 
+</div>
+<!-- End RSS Feed Section -->
+
+<!-- Slide Rule Section-->
+<div id="layer40"; style="position: absolute; width: 938px; height: 20px; z-index: 40; left: 128px; top: 900px"; align="left">
+<b><big>Addition Slide Rule</big></b>
+<hr>
+</div>
+<script type="text/javascript" src="slide_rules\add\wz_dragdrop.js"></script>
+
+<div id="layer4" style="position:relative; top:930px; left:128px; height:290px; width:938px"; z-index:4>   
+   <img style="position:absolute;top:28px;left:0;" id="add_statortop" src="slide_rules\add\add_top.jpg" width=918 height=47 >
+   <img style="position:absolute;top:74px;left:0;" name="add_slider" src="slide_rules\add\add_slider.jpg" width=918 height=68 >
+   <img style="position:absolute;top:142px;left:0;" id="add_statorbottom" src="slide_rules\add\add_bottom.jpg" width=918 height=47 >
+   <img style="position:absolute;top:74px;left:0;" name="add_leftendbit" src="slide_rules\add\add_leftbit.gif" width=33 height=68 >
+   <img style="position:absolute;top:74px;left:882;" name="add_rightendbit" src="slide_rules\add\add_rightbit.gif" width=36 height=68  >
+   <img style="position:absolute;top:-4px;left:200;" name="add_cursor" src="slide_rules\add\add_cursor.gif" width=83 height=216 >
+</div>
+
+<div id="layer5" style="position:relative; top:640px; left:128px;height:290px; width:938px"; z-index:5>  
+   <img style="position:absolute;top:328px;left:0;" id="mult_statortop" src="slide_rules\mult\mult_top.jpg" width=918 height=47 >
+   <img style="position:absolute;top:374px;left:0;" name="mult_slider" src="slide_rules\mult\mult_slider.jpg" width=918 height=68 >
+   <img style="position:absolute;top:442px;left:0;" id="mult_statorbottom" src="slide_rules\mult\mult_bottom.jpg" width=918 height=47 >
+   <img style="position:absolute;top:374px;left:0;" name="mult_leftendbit" src="slide_rules\mult\mult_leftbit.gif" width=33 height=68 >
+   <img style="position:absolute;top:374px;left:882;" name="mult_rightendbit" src="slide_rules\mult\mult_rightbit.gif" width=36 height=68  >
+   <img style="position:absolute;top:296px;left:200;" name="mult_cursor" src="slide_rules\mult\mult_cursor.gif" width=83 height=216 >
+</div>
+
+<div id="layer6" style="position:relative; top:350px; left:128px; height:290px; width:938px"; z-index:6> 
+   <img style="position:absolute;top:628px;left:0;" id="cstr_statortop" src="slide_rules\cstr\cstr_top.jpg" width=918 height=47 >
+   <img style="position:absolute;top:674px;left:0;" name="cstr_slider" src="slide_rules\cstr\cstr_slider.jpg" width=918 height=68 >
+   <img style="position:absolute;top:742px;left:0;" id="cstr_statorbottom" src="slide_rules\cstr\cstr_bottom.JPG" width=918 height=47 >
+   <img style="position:absolute;top:674px;left:0;" name="cstr_leftendbit" src="slide_rules\cstr\cstr_leftbit.gif" width=33 height=68 >
+   <img style="position:absolute;top:674px;left:882;" name="cstr_rightendbit" src="slide_rules\cstr\cstr_rightbit.gif" width=36 height=68  >
+   <img style="position:absolute;top:596px;left:200;" name="cstr_cursor" src="slide_rules\cstr\cstr_cursor.gif" width=83 height=216 >
+</div>
+
+<div id="layer7" style="position:relative; top:60px; left:128px; height:290px; width:938px"; z-index:7> 
+   <img style="position:absolute;top:928px;left:0;" id="pick_statortop" src="slide_rules\pickett\pick_top.jpg" width=918 height=47 >
+   <img style="position:absolute;top:974px;left:0;" name="pick_slider" src="slide_rules\pickett\pick_slider.jpg" width=918 height=68 >
+   <img style="position:absolute;top:1042px;left:0;" id="pick_statorbottom" src="slide_rules\pickett\pick_bottom.jpg" width=918 height=47 >
+   <img style="position:absolute;top:974px;left:0;" name="pick_leftendbit" src="slide_rules\pickett\pick_leftbit.gif" width=33 height=68 >
+   <img style="position:absolute;top:974px;left:882;" name="pick_rightendbit" src="slide_rules\pickett\pick_rightbit.gif" width=36 height=68  >
+   <img style="position:absolute;top:896px;left:200;" name="pick_cursor" src="slide_rules\pickett\pick_cursor.gif" width=83 height=216 >
+</div>
+
+<script type="text/javascript">
+<!--
+     SET_DHTML(CURSOR_HAND,   
+          "add_cursor"+HORIZONTAL, "add_rightendbit"+HORIZONTAL+VERTICAL, "add_leftendbit"+HORIZONTAL+VERTICAL,  "add_slider"+HORIZONTAL,
+          "mult_cursor"+HORIZONTAL,"mult_rightendbit"+HORIZONTAL+VERTICAL,"mult_leftendbit"+HORIZONTAL+VERTICAL, "mult_slider"+HORIZONTAL,
+          "cstr_cursor"+HORIZONTAL,"cstr_rightendbit"+HORIZONTAL+VERTICAL,"cstr_leftendbit"+HORIZONTAL+VERTICAL, "cstr_slider"+HORIZONTAL,
+          "pick_cursor"+HORIZONTAL,"pick_rightendbit"+HORIZONTAL+VERTICAL,"pick_leftendbit"+HORIZONTAL+VERTICAL, "pick_slider"+HORIZONTAL,
+          "layer4"+HORIZONTAL);
+-->
+</script>
+
+<!-- Multiplication Slide Rule Title-->
+<div id="layer50"; style="position: absolute; width: 938px; height: 20px; z-index: 40; left: 128px; top: 1200px"; align="left">
+<b><big>Multiplication Slide Rule</big></b>
+<hr>
+</div>
+<!--CSTR Slide Rule Title-->
+<div id="layer50"; style="position: absolute; width: 938px; height: 20px; z-index: 40; left: 128px; top: 1500px"; align="left">
+<b><big>CSTR Slide Rule</big></b>
+<hr>
+</div>
+<!--Pickett Slide Rule Title Section-->
+<div id="layer60"; style="position: absolute; width: 938px; height: 20px; z-index: 40; left: 128px; top: 1800px"; align="left">
+<b><big>Pickett 160 Slide Rule - Top</big></b>
+<hr>
+</div>
+<!-- End Slide Rule Section -->
+
+
+<!-- Sidereal Clock Section -->
+<div id="layer8"; style="position: absolute; width: 250px; height: 280px; z-index: 3; left: 128px; top: 350px"; align="left">
+</div>
+<!-- End Sidereal Clock Section -->
+
+</body>
+</html>
