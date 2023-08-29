@@ -13,3 +13,16 @@ CHEMCAD rollback issue during install can be repaired with the following procedu
 6. Let me know how you continue to have issues.
 
 Dr. Biaglow
+
+
+Hello Andrew,
+ 
+Thanks for contacting the Chemcad technical support team with your issue for installing Chemcad.
+ 
+As I've read in your email, you have already tried to troubleshoot the installation problem with the described procedure. And looking at the instalation errorlog, the issue seems to be related to the Sentinel Protection Services associated with port UDP 6001.
+ 
+So, some further recomendations to stop the services with Port 6001, would be using the Resource Monitor application (Windows search "resource monitor") instead of the cmd, to look for the PID number associated to the Port. Go to the network tab and sort by the Port. Ocasionally, another helpful option is to look for Port 6002 in order to find the PID number, this will as well enable you to stop the sentinel protection services.
+ 
+Another important suggestion is to restart your computer before doing any troubleshooting, this will restart any services and may help you find port 6001.
+ 
+Hope these suggestions helps you resolve your issue and please contact me again if you were able to solve the problem.
