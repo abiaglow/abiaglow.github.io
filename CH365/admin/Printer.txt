@@ -18,7 +18,7 @@ CLEARING THE PRINT SPOOLER:
 3.  On the left, click "Bluetooth & devices."
 4.  Click "Printers & Scanners.
 5.  Scroll down to the printer and click it.
-6.  Open the print queue and delete any jobhs associated with your name.
+6.  Open the print queue and delete any jobs associated with your name.
 
 CONNECTING TO THE PRINTER:
 
