@@ -1,22 +1,31 @@
+								30 October 2023
+
 There have been issues with printing in Room 331.
 
-If you print something and it does not print out, you must clear the print spooler.  
-Your failed job will be preventing other cadets from printing from their computers.
+The primary issue appears to be that the name of the printer changes in firmware each time
+the printer gets a new IP address from DHCP.  Your instructor knows how to repair this issue,
+so if your print jobs fail, please report the isse ASAP.
 
-Do this as follows:
+Your failed job will permanently prevent other cadets from printing from their computers.
+If you send something to the printer and it does not print out, the issue might be with
+you and not the printer.  So if your print job fails, please be courteous and clear the
+print spooler.  
+
+CLEARING THE PRINT SPOOLER:
 
 1.  Click the Microsoft "Start" button on the lower left portion of your main monitor.
-2.  Click "Devices and Printers."
-3.  Click "Printers" on the main menu and then "Run as Administrator."
-4.  Click on the Lexmark printer with the green checkmark.
-5.  Clear all jobs from the spooler.
+2.  Click "settings."
+3.  On the left, click "Bluetooth & devices."
+4.  Click "Printers & Scanners.
+5.  Scroll down to the printer and click it.
+6.  Open the print queue and delete any jobhs associated with your name.
 
-We have been experiencing some network issues.  If you still cannot print at this point, 
-the network issues may be the cause.  
+CONNECTING TO THE PRINTER:
 
-You can try re-starting the computer.  This may or may not correct the issue.  I have seen 
-this work about half the time.
-
-
+1.  In the search field, type "Printers & scanners."
+2.  Click "Add device" and wait for the system to refresh.
+3.  Click "Add mannually."
+4.  Check the radio button for "Select a shared printer by name."
+5.  In the address field, type //print.westpoint.edu/WPPRCLS331
 
 
