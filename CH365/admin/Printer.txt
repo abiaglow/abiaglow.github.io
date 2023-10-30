@@ -24,7 +24,7 @@ CONNECTING TO THE PRINTER:
 
 1.  In the search field, type "Printers & scanners."
 2.  Click "Add device" and wait for the system to refresh.
-3.  Click "Add mannually."
+3.  Click "Add manually."
 4.  Check the radio button for "Select a shared printer by name."
 5.  In the address field, type //print.westpoint.edu/WPPRCLS331
 
