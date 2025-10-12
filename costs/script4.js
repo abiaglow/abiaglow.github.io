@@ -59,10 +59,10 @@
             const num2 = parseFloat(b);
 
             switch (operator) {
-                case "+": return (num1 + num2).toString();
-                case "-": return (num1 - num2).toString();
-                case "*": return (num1 * num2).toString();
-                case "/": return (num1 / num2).toString();
+                case "+": return (num1 + num2).toFixed(2);
+                case "-": return (num1 - num2).toFixed(2);
+                case "*": return (num1 * num2).toFixed(2);
+                case "/": return (num1 / num2).toFixed(2);
                 case "cost": return (1.03*(1438.9/708)*((num1-(2*num2/1000))**1.73)).toFixed(2);
             default:  return b;  
             }
