@@ -65,11 +65,11 @@
                 case "-": return (num1 - num2).toFixed(2);
                 case "*": return (num1 * num2).toFixed(2);
                 case "/": return (num1 / num2).toFixed(2);
-                case "%": return ((num1 * num2) / 100).toFixed(4);
-                case "c1": return (1.03*(1438.9/708)*((num1-(2*num2/1000))**1.73)).toFixed(2);
-                case "c2": return (1.00*(1438.9/708)*((0.4182*(num1**2) + 0.6577*num1 + 5.7516) - num2 + num2)).toFixed(2);
-                case "c3": return (1.00*(1438.9/555.8)*((-0.0061*(num1**3) + 0.1707*(num1**2) + 0.8484*num1 - 0.1472) - num2 + num2)).toFixed(2);
-                case "c4": return (1.00*(1438.9/555.8)*((-0.0162*(num1**3) + 0.5467*(num1**2) + 0.3030*num1 + 1.1858) - num2 + num2)).toFixed(2);
+                case "%": return ((num1 * num2) / 100).toFixed(2);
+                case "c1": return (num1 * num2).toFixed(2);
+                case "c2": return (num1 * num2).toFixed(2);
+                case "c3": return (num1 * num2).toFixed(2);
+                case "c4": return (num1 * num2).toFixed(2);
             default:  return b;  
             }
         }
@@ -138,7 +138,7 @@
           toggleSign();
         } else if (input === "=") {
           handleEqual();
-        } else if (["+", "-", "*", "/", "%", "c1", "c2", "c3", "c4"].includes(input)) {
+        } else if (["c1", "c2", "c3", "c4", "+", "-", "*", "/", "%"].includes(input)) {
           const operatorButton = document.querySelector(
             `.operator[data-action="${input}"]`
           );
@@ -182,7 +182,7 @@
           return;
         }
         if (
-          ["+", "-", "*", "/", "%", "c1", "c2", "c3", "c4", ".", "=", "ac", "plus-minus"].includes(
+          ["c1", "c2", "c3", "c4", "+", "-", "*", "/", "%", ".", "=", "ac", "plus-minus"].includes(
             key
           ) ||
           (!isNaN(key) && key !== " ")
