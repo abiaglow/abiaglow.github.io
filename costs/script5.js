@@ -66,6 +66,9 @@
                 case "*": return (num1 * num2).toFixed(2);
                 case "/": return (num1 / num2).toFixed(2);
                 case "%": return ((num1 * num2) / 100).toFixed(2);
+
+                case "a": return (1.03 * (1438.9 / 708) * (num1 - num2)).toFixed(2);
+
             default:  return b;  
             }
         }
@@ -134,7 +137,7 @@
           toggleSign();
         } else if (input === "=") {
           handleEqual();
-        } else if (["+", "-", "*", "/", "%"].includes(input)) {
+        } else if (["+", "-", "*", "/", "%", "a"].includes(input)) {
           const operatorButton = document.querySelector(
             `.operator[data-action="${input}"]`
           );
@@ -178,7 +181,7 @@
           return;
         }
         if (
-          ["+", "-", "*", "/", "%", ".", "=", "ac", "plus-minus"].includes(
+          ["+", "-", "*", "/", "%", "a", ".", "=", "ac", "plus-minus"].includes(
             key
           ) ||
           (!isNaN(key) && key !== " ")
