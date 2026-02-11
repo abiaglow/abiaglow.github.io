@@ -23,8 +23,8 @@ CLEARING THE PRINT SPOOLER:
 CONNECTING TO THE PRINTER:
 
 1.  In the search field, type "Printers & scanners."
-2.  Click "Add a new device manually" and wait for the system to refresh.
-3.  Click "Add a new device manually."
-4.  Check the radio button for "Add a printer using an IP address or hostname" and click "Next."
-5.  In the "Hostname or IP address" field, type "WPPRCLS331" and click "Next."
+2.  Wait for the system to refresh and click "Add a new device manually."
+3.  Check the radio button for "Add a printer using an IP address or hostname" and click "Next."
+4.  In the "Hostname or IP address" field, type "WPPRCLS331" and click "Next."
+5.  Click "Finish."
 
