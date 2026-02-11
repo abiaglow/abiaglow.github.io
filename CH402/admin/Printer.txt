@@ -1,0 +1,30 @@
+								11 February 2026
+
+There have been issues with printing in Room 331.
+
+The primary issue appears to be that the name of the printer changes in firmware each time
+the printer gets a new IP address from DHCP.  Your instructor knows how to repair this issue,
+so if your print jobs fail, please report the issue ASAP.
+
+Your failed job will permanently prevent other cadets from printing from their computers.
+If you send something to the printer and it does not print out, the issue might be with
+you and not the printer.  So if your print job fails, please be courteous and clear the
+print spooler.  
+
+CLEARING THE PRINT SPOOLER:
+
+1.  Click the Microsoft "Start" button on the lower left portion of your main monitor.
+2.  Click "settings."
+3.  On the left, click "Bluetooth & devices."
+4.  Click "Printers & Scanners.
+5.  Scroll down to the printer and click it.
+6.  Open the print queue and delete any jobs associated with your name.
+
+CONNECTING TO THE PRINTER:
+
+1.  In the search field, type "Printers & scanners."
+2.  Click "Add a new device manually" and wait for the system to refresh.
+3.  Click "Add a new device manually."
+4.  Check the radio button for "Add a printer using an IP address or hostname" and click "Next."
+5.  In the "Hostname or IP address" field, type "WPPRCLS331" and click "Next."
+
