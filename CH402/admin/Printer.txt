@@ -1,15 +1,22 @@
-								11 February 2026
+								5 May 2026
 
-There have been issues with printing in Room 331.
+CONNECTING TO THE PRINTER:
 
-The primary issue appears to be that the name of the printer changes in firmware each time
-the printer gets a new IP address from DHCP.  Your instructor knows how to repair this issue,
-so if your print jobs fail, please report the issue ASAP.
+1.  In the search field, type "\\print.westpoint.edu"
+2.  Search for the printer named "WPPRCLS331>"
+3.  Right-click and connect.
+4.  Click "Next" when prompted.
 
-Your failed job will permanently prevent other cadets from printing from their computers.
-If you send something to the printer and it does not print out, the issue might be with
-you and not the printer.  So if your print job fails, please be courteous and clear the
-print spooler.  
+ISSUES WITH PRINTING IN 331:
+
+A recurring issue is that the name of the printer changes in firmware each time 
+the printer gets a new IP address from DHCP.  Your instructor knows how to repair 
+this issue, so if your print jobs fail, please report the issue ASAP.
+
+Your failed job may prevent other cadets from printing from their computers.  
+If you send something to the printer and it does not print out, the issue might
+be with you and not the printer.  So if your print job fails, please be courteous 
+and clear the print spooler.  
 
 CLEARING THE PRINT SPOOLER:
 
@@ -19,12 +26,3 @@ CLEARING THE PRINT SPOOLER:
 4.  Click "Printers & Scanners.
 5.  Scroll down to the printer and click it.
 6.  Open the print queue and delete any jobs associated with your name.
-
-CONNECTING TO THE PRINTER:
-
-1.  In the search field, type "Printers & scanners."
-2.  Wait for the system to refresh and click "Add a new device manually."
-3.  Check the radio button for "Add a printer using an IP address or hostname" and click "Next."
-4.  In the "Hostname or IP address" field, type "WPPRCLS331" and click "Next."
-5.  Click "Finish."
-
