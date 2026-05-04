@@ -1,4 +1,4 @@
-								5 May 2026
+							    5 May 2026
 
 CONNECTING TO THE PRINTER:
 
@@ -9,20 +9,22 @@ CONNECTING TO THE PRINTER:
 
 ISSUES WITH PRINTING IN 331:
 
-A recurring issue is that the name of the printer changes in firmware each time 
-the printer gets a new IP address from DHCP.  Your instructor knows how to repair 
-this issue, so if your print jobs fail, please report the issue ASAP.
+A recurring issue is that the name of the printer changes in firmware
+each time the printer gets a new IP address from DHCP.  
 
-Your failed job may prevent other cadets from printing from their computers.  
-If you send something to the printer and it does not print out, the issue might
-be with you and not the printer.  So if your print job fails, please be courteous 
-and clear the print spooler.  
+Your instructor knows how to repair this issue, so if your print jobs
+fails, please report the issue ASAP.
+
+Your failed job may prevent other cadets from printing from their 
+computers. If you send something to the printer and it does not print,
+the issue might be with you and not the printer.  If your print job 
+fails, please be courteous and clear the print spooler.  
 
 CLEARING THE PRINT SPOOLER:
 
-1.  Click the Microsoft "Start" button on the lower left portion of your main monitor.
-2.  Click "settings."
-3.  On the left, click "Bluetooth & devices."
+1.  Click the "Start" button on the lower left corner of your screen.
+2.  Find and click "settings."
+3.  Click "Bluetooth & devices."
 4.  Click "Printers & Scanners.
 5.  Scroll down to the printer and click it.
-6.  Open the print queue and delete any jobs associated with your name.
+6.  Open the print queue and delete jobs associated with your name.
